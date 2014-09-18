@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>material-theme Demo</title>
+
+  <script src="../platform/platform.js"></script>
+  <link rel="import" href="material-theme.html">
+
+</head>
+<body unresolved>
+
+  <p>An `material-theme` looks like this:</p>
+<core-theme primaryColor="teal" accentColor="purple" fit flex>
+  <core-drawer-panel id="panels" responsiveWidth="1280px">
+    <core-header-panel drawer id="appDrawer" mode="waterfall">
+      <core-toolbar class="tall" id="appPlate" class="medium-tall">
+        <div fit vertical layout center>
+          <core-icon icon="store" style="width:200px; height:200px;"></core-icon>
+          <div>Demo</div>
+        </div>
+      </core-toolbar>
+      <core-menu id="menu" valueattr="label" selected="Restaurants" on-core-activate="{{toggleDrawer}}">
+        <core-item label="Restaurants" icon="store"></core-item>
+        <core-item label="Settings" icon="settings"></core-item>
+        <core-item label="About" icon="info"></core-item>
+      </core-menu>
+    </core-header-panel>
+    <div main mode="waterfall" vertical layout fit>
+      <core-toolbar id="appToolbar" class="medium">
+        <core-icon-button icon="menu" on-tap="{{navAction}}"></core-icon-button>
+        <div flex class="toolbar-label text-title">Demo</div>
+      </core-toolbar>
+      <div flex>
+        hello world
+      </div>
+    </div>
+  </core-drawer-panel>
+</core-theme>
+  <material-theme primaryColor=""></material-theme>
+
+</body>
+</html>
